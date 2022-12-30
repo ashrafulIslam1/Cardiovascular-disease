@@ -1,0 +1,92 @@
+{% extends 'main.html' %}
+
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardiovascular form</title>
+</head>
+<body>
+    <br> <br>
+    <div class="form-title">
+        <h4 class="display-4"><b>Cardiovascular Form</b></h4>
+        <hr class="w-50 mx-auto" >
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-12 col-sm-10 mx-auto shadow p-3 mb-5 bg-body rounded">
+                <div class="project-form">
+                    <form action="result">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Enter your Age in days:</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Age" name="age" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Enter your Gender(Male = 2 | Female = 1):</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Gender" name="gender" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Enter your height in cm:</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Height" name="height" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Enter your Weight in kg:</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Weight" name="weight" required>
+                        </div>
+
+                        <div class="form-group">
+                        <label for="formGroupExampleInput">Enter your Systolic blood pressure:</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="B_High" name="ap_high" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Enter your Diastolic blood pressure:</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="B_Low" name="ap_low" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Enter your Cholesterol level (Yes = 1 | No = 0):</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Cholesterol" name="cholesterol" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Enter your Glucose level(Yes = 1 | No = 0):</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Glucose" name="glucose" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Enter your Somke status(Yes = 1 | No = 0):</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Smoke" name="smoke" required>
+                        </div>
+
+                        <div class="form-group">Enter your Alcohol status(Yes = 1 | No = 0):</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Alcohol" name="alcohol" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Enter your Physical activity status(Ok = 1 | No = 0):</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Physical activity" name="activity" required>
+                        </div><br>
+
+                        <input type="submit", value="submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+</body>
+</html>
+{% endblock %}

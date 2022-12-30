@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'style/main.css' %}">
+    <link rel="stylesheet" href="{% static 'style/form.css' %}">
+    <link rel="stylesheet" href="{% static 'style/nav.css' %}">
+    
+    <title>Cardiovascular Disease ditection</title>
+</head>
+<body>
+    
+    {% include 'nav.html' %}
+    
+    {% block content %}
+    <br>
+    <div class="cardiovascualr-disease">
+        <p>
+            Cardiovascular Disease is a huge public health issue all over the world. It is the leading cause of sickness and mortality on a global scale. The economic burden of different types of CVD is considerable. Bangladesh has always been an impoverished country plagued by communicable diseases. <br>
+            In today’s world patient of cardiovascular disease is going high. Everywhere peoples are facing this disease. Some peoples are doing heart attack, some peoples are doing heart stroke, these are related to this cardiovascular disease. In our country also if we visit the Cardiovascular institute, we will see the real picture of this disease. So many people are affected with this disease.
+        </p>
+    </div>
+
+    <div class="card-deck" style="margin-left: 15px; margin-right: 15px;">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/im1.png' %}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Cardiovascular affected heart</h5>
+            <p class="card-text">When a patient affected with cardiovascualr-disease in that time they can also have others problem related to the heart.</p>
+            <p class="card-text"><small class="text-muted">Cardio affected heart</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/im3.png' %}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Human Heart Problem</h5>
+            <p class="card-text">Cardiovascular Disease is a big human health issue all over the world. It is the leading cause of sickness and mortality on a global scale.</p>
+            <p class="card-text"><small class="text-muted">Human heart problem</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/im2.png' %}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Types of Heart problem</h5>
+            <p class="card-text">There are different types of heart problem such as Coronary Artery Disease (CAD), Heart Arrhythmias, Heart Failure etc</p>
+            <p class="card-text"><small class="text-muted">different types of heart problem</small></p>
+          </div>
+        </div>
+      </div>
+
+      <br>
+    <div class="cardio-app">
+        <p>
+            <b>Cardiovascular Disease Detection</b> is a type of system where a person can predict he/she has cardiovascualr-disease or not. For cheking the disease person have to give some input data. By depending on these data my system will predict the person has cardiovascualr-disease or not. 
+            <p>Input parameters are: </p>
+            <ol>
+                <li>Age</li>
+                <li>Gender</li>
+                <li>Height</li>
+                <li>Weight</li>
+                <li>Systolic blood pressure</li>
+                <li>Diastolic blood pressure</li>
+                <li>Cholesterol level</li>
+                <li>Glucose level</li>
+                <li>Somke status</li>
+                <li>Alcohol status</li>
+                <li>Physical activity status</li>
+            </ol
+        </p>
+
+        <p style="color: rgb(231, 58, 58);"><b>Do you want to predict Cardiovascular Disease?</b> </p>
+        <p class="Check Cardiovascular Disease"><a href="{% url 'cardioform' %}" class="btn btn-warning"><b>Click here</b></a></p>
+    </div>
+
+    
+    
+    {% endblock content %}
+    {% include 'footer.html' %}
+
+</body>
+
+
+</html>

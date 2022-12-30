@@ -1,0 +1,16 @@
+*{
+    box-sizing: border-box;
+}
+.form-title{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    color:rgb(21, 204, 39);
+}
+
+.user-details{
+    flex-direction: column; 
+    flex-direction: row;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
